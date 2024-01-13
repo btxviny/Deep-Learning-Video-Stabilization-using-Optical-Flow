@@ -9,3 +9,7 @@ This stabilization algorithm is based on pixel-profile stabilization. The pixel 
 The discontinuous regions are inpainted using the principal components of optical flow provided in [PCA-Flow](http://openaccess.thecvf.com/content_cvpr_2015/papers/Wulff_Efficient_Sparse-to-Dense_Optical_2015_CVPR_paper.pdf).
 
 ![pca](https://github.com/btxviny/Deep-Learning-Video-Stabilization-using-Optical-Flow/blob/main/images/principal%20components.png)
+
+From the inpainted flow we construct the pixel profiles, which are stabilized with our network using a sliding window approach. The network was trained to minimize the following objective function.
+
+![loss](https://github.com/btxviny/Deep-Learning-Video-Stabilization-using-Optical-Flow/blob/main/images/stability_loss.png)
