@@ -16,9 +16,9 @@ From the inpainted flow we construct the pixel profiles, which are stabilized wi
 
 I add a final stabilization step with parametric filtering, using Pytorch's averagepool1d to speed up the process.
 
-1. **Download the pretrained model [Weights](https://drive.google.com/drive/folders/1DNBNRq-ht1NgmPcmOGdwIwjhZs19koic?usp=sharing)**
+1. **Download the pretrained model [Weights](https://drive.google.com/drive/folders/1DNBNRq-ht1NgmPcmOGdwIwjhZs19koic?usp=sharing) and place them in 'ckpts'.**
 
-3. **Run the Stabilization Script:**
+2. **Run the Stabilization Script:**
    - Run the following command:
      ```bash
      python stabilize.py --in_path unstable_video_path --out_path result_path
@@ -26,4 +26,4 @@ I add a final stabilization step with parametric filtering, using Pytorch's aver
    - Replace `unstable_video_path` with the path to your input unstable video.
    - Replace `result_path` with the desired path for the stabilized output video.
 
-4. I provide the notebook train.ipynb which I used to train the network, with some additional regulatory terms to the loss function so that the resulting video is not oversmoothed.
+3. I provide the notebook train.ipynb which I used to train the network, with some additional regulatory terms to the loss function so that the resulting video is not oversmoothed.
