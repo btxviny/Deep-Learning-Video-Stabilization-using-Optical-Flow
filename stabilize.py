@@ -102,8 +102,6 @@ def stabilize(in_path,out_path):
 
 if __name__ == '__main__':
     args = parse_args()
-    #in_path = 'E:/Datasets/DeepStab_Dataset/unstable/18.avi'
-    #out_path = './2.avi'
     #set up raft
     raft = models.optical_flow.raft_small(weights = 'Raft_Small_Weights.C_T_V2').eval().to(device)
     #set up midas
