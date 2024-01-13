@@ -16,8 +16,7 @@ From the inpainted flow we construct the pixel profiles, which are stabilized wi
 
 I add a final stabilization step with parametric filtering, using Pytorch's averagepool1d to speed up the process.
 
-1. **Download the pretrained model**
-    -[Weights](https://drive.google.com/drive/folders/1DNBNRq-ht1NgmPcmOGdwIwjhZs19koic?usp=sharing)
+1. **Download the pretrained model [Weights](https://drive.google.com/drive/folders/1DNBNRq-ht1NgmPcmOGdwIwjhZs19koic?usp=sharing)**
 
 3. **Run the Stabilization Script:**
    - Run the following command:
