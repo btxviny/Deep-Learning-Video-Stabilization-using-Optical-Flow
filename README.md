@@ -13,3 +13,15 @@ The discontinuous regions are inpainted using the principal components of optica
 From the inpainted flow we construct the pixel profiles, which are stabilized with our network using a sliding window approach. The network was trained to minimize the following objective function.
 
 ![loss](https://github.com/btxviny/Deep-Learning-Video-Stabilization-using-Optical-Flow/blob/main/images/stability_loss.png)
+
+I add a final stabilization step with parametric filtering, using Pytorch's averagepool1d to speed up the process.
+
+1. **Run the Stabilization Script:**
+   - Run the following command:
+     ```bash
+     python stabilize.py --in_path unstable_video_path --out_path result_path
+     ```
+   - Replace `unstable_video_path` with the path to your input unstable video.
+   - Replace `result_path` with the desired path for the stabilized output video.
+
+2. I provide the notebook train.ipynb which I used to train the network, with some additional regulatory terms to the loss function so that the resulting video is not oversmoothed.
